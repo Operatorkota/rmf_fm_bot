@@ -3,11 +3,7 @@
     "SPOTIPY_CLIENT_ID": "",
     "SPOTIPY_CLIENT_SECRET": "",
     "GEMINI_API_KEYS": [
-      "AIzaSyAnlwaUMX9CZc0c8Qti4U4cwFBRaknwJVA",
-      "AIzaSyDXg3mP-4pfxRv8HjqVqZkTIHM7xuuS1i8",
-      "AIzaSyAnlwaUMX9CZc0c8Qti4U4cwFBRaknwJVA",
-      "AIzaSyALRgzEWWxwQ9Xxolwh78UJjcEXPXdI8mM",
-      "AIzaSyCfZRc7v7BGEATGRGzXNeIZkuB14cKqydQ"
+      
     ],
     "OWNER_ID": 877210657953566751,
     "HUB_CHANNEL_ID": 1453906304925044738,
