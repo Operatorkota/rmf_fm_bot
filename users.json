@@ -1,5 +1,101 @@
 [
     {
+        "id": 1423975814277496895,
+        "name": "kt44zz_",
+        "discriminator": "0",
+        "nick": "HOKUS",
+        "roles": [
+            "@everyone",
+            "Struj Do Przebrania się",
+            "Ukraińska Mafia",
+            "PACJENT",
+            "☢GAZOWNIK☢",
+            "Psychiatra",
+            "Medyk",
+            "GANG PRUSZKOWSKI",
+            "Prawnik",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Starszy Kapral"
+        ]
+    },
+    {
+        "id": 1175540082824982620,
+        "name": "girekuwu_16714",
+        "discriminator": "0",
+        "nick": "Pampers",
+        "roles": [
+            "@everyone",
+            "Kara Żółta 1",
+            "PACJENT",
+            "Orderly",
+            "Rekrut Orderly"
+        ]
+    },
+    {
+        "id": 1146441691562250340,
+        "name": "plapla_50179",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Server Booster",
+            "PACJENT",
+            "Combat medic",
+            "Prokurator",
+            "Prawnik",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Zastępca Szefa Orderly",
+            "Dyrektor Placówki",
+            "ㅤㅤㅤAdministracja",
+            "Administrator",
+            "CO Owner",
+            "Booster"
+        ]
+    },
+    {
+        "id": 877210657953566751,
+        "name": "operatorkota",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Zajebane_radio",
+            "PACJENT",
+            "GANG PRUSZKOWSKI",
+            "Prokurator",
+            "Prawnik",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Kapral Orderly",
+            "Strefa Orderly↓",
+            "ㅤㅤㅤAdministracja",
+            "Młodszy Moderator",
+            "Moderator",
+            "Starszy Moderator",
+            "Młodszy Administrator",
+            "Administrator",
+            "Starszy Administator",
+            "Fundusz Placówki™",
+            "Owner"
+        ]
+    },
+    {
+        "id": 767109390129692753,
+        "name": "puro5244",
+        "discriminator": "0",
+        "nick": "[Szef Orderly ] Gabriel",
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Prawnik",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Szef Orderly"
+        ]
+    },
+    {
         "id": 1392556613151232000,
         "name": "dev.0ur",
         "discriminator": "0",
@@ -70,26 +166,6 @@
             "@everyone",
             "InviteLogger",
             "BOTY"
-        ]
-    },
-    {
-        "id": 1423975814277496895,
-        "name": "kt44zz_",
-        "discriminator": "0",
-        "nick": "HOKUS",
-        "roles": [
-            "@everyone",
-            "Struj Do Przebrania się",
-            "Ukraińska Mafia",
-            "PACJENT",
-            "☢GAZOWNIK☢",
-            "Psychiatra",
-            "Medyk",
-            "GANG PRUSZKOWSKI",
-            "Prawnik",
-            "Pozwolenie na broń",
-            "Orderly",
-            "Starszy Kapral"
         ]
     },
     {
@@ -244,42 +320,6 @@
         ]
     },
     {
-        "id": 1146441691562250340,
-        "name": "plapla_50179",
-        "discriminator": "0",
-        "nick": null,
-        "roles": [
-            "@everyone",
-            "Server Booster",
-            "PACJENT",
-            "Combat medic",
-            "Prokurator",
-            "Prawnik",
-            "Pozwolenie na broń",
-            "Orderly",
-            "Zastępca Szefa Orderly",
-            "Dyrektor Placówki",
-            "ㅤㅤㅤAdministracja",
-            "Administrator",
-            "CO Owner",
-            "Booster"
-        ]
-    },
-    {
-        "id": 767109390129692753,
-        "name": "puro5244",
-        "discriminator": "0",
-        "nick": "[Szef Orderly ] Gabriel",
-        "roles": [
-            "@everyone",
-            "PACJENT",
-            "Prawnik",
-            "Pozwolenie na broń",
-            "Orderly",
-            "Szef Orderly"
-        ]
-    },
-    {
         "id": 820328684845268992,
         "name": "stefan_2138",
         "discriminator": "0",
@@ -356,30 +396,13 @@
         ]
     },
     {
-        "id": 877210657953566751,
-        "name": "operatorkota",
+        "id": 1403730737957437534,
+        "name": "operatorkota1",
         "discriminator": "0",
         "nick": null,
         "roles": [
             "@everyone",
-            "Zajebane_radio",
-            "PACJENT",
-            "GANG PRUSZKOWSKI",
-            "Prokurator",
-            "Prawnik",
-            "Pozwolenie na broń",
-            "Orderly",
-            "Kapral Orderly",
-            "Strefa Orderly↓",
-            "ㅤㅤㅤAdministracja",
-            "Młodszy Moderator",
-            "Moderator",
-            "Starszy Moderator",
-            "Młodszy Administrator",
-            "Administrator",
-            "Starszy Administator",
-            "Fundusz Placówki™",
-            "Owner"
+            "PACJENT"
         ]
     },
     {
@@ -498,36 +521,13 @@
         "nick": "OPERATOR KOTA",
         "roles": [
             "@everyone",
-            "PACJENT"
-        ]
-    },
-    {
-        "id": 1175540082824982620,
-        "name": "girekuwu_16714",
-        "discriminator": "0",
-        "nick": "60km/h",
-        "roles": [
-            "@everyone",
-            "Kara Czerwona 1",
             "PACJENT",
-            "Pozwolenie na broń",
-            "Orderly",
-            "Rekrut Orderly"
+            "Partnerstwo"
         ]
     },
     {
         "id": 1159834210366922782,
         "name": "jerzy_l",
-        "discriminator": "0",
-        "nick": null,
-        "roles": [
-            "@everyone",
-            "PACJENT"
-        ]
-    },
-    {
-        "id": 1431741003647418498,
-        "name": "kacpersa136atr001",
         "discriminator": "0",
         "nick": null,
         "roles": [
@@ -573,8 +573,7 @@
         "nick": null,
         "roles": [
             "@everyone",
-            "PACJENT",
-            "iSO"
+            "PACJENT"
         ]
     },
     {
@@ -650,8 +649,8 @@
         ]
     },
     {
-        "id": 1403730737957437534,
-        "name": "operatorkota1",
+        "id": 1348035790508130314,
+        "name": "eloelo3200413",
         "discriminator": "0",
         "nick": null,
         "roles": [

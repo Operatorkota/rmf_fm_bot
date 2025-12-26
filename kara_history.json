@@ -81,5 +81,17 @@
             }
         ],
         "current_role_id": 1437130372524806255
+    },
+    "1175540082824982620": {
+        "punishments": [
+            {
+                "strefa": "\u017c\u00f3\u0142ta",
+                "reason": "RDM",
+                "moderator": "operatorkota",
+                "date": "2025-12-26T15:04:37.493375",
+                "mute_duration": "0m"
+            }
+        ],
+        "current_role_id": 1437130369525616802
     }
 }
