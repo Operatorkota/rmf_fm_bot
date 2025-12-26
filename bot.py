@@ -1543,6 +1543,50 @@ async def user_info(ctx, member: discord.Member = None):
     await ctx.send(embed=embed)
 
 
+# --- Activity Command ---
+
+class ActivityView(discord.ui.View):
+    def __init__(self):
+        super().__init__(timeout=None)
+        self.claimed = False
+
+    @discord.ui.button(label="Odbierz 3000", style=discord.ButtonStyle.green, custom_id="activity_claim_3k")
+    async def claim_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+        if self.claimed:
+            await interaction.response.send_message("Nagroda została już odebrana!", ephemeral=True)
+            return
+
+        self.claimed = True
+        for child in self.children:
+            child.disabled = True
+        
+        await interaction.response.edit_message(view=self)
+        
+        # Log to MOD_LOG_CHANNEL_ID
+        mod_log_channel_id = config.get("MOD_LOG_CHANNEL_ID")
+        if mod_log_channel_id:
+            log_channel = interaction.client.get_channel(mod_log_channel_id)
+            if log_channel:
+                await log_channel.send(f"!economy add {interaction.user.id} 3000")
+        
+        await interaction.followup.send(f"🎉 Gratulacje {interaction.user.mention}! Otrzymałeś 3000 kasy!")
+
+@bot.command()
+async def aktywnosc(ctx):
+    target_channel_id = 1454052478499950746
+    if ctx.channel.id != target_channel_id:
+        await ctx.send(f"Ta komenda działa tylko na kanale <#{target_channel_id}>.")
+        return
+
+    embed = discord.Embed(
+        title="Test Aktywność",
+        description="Kto pierwszy ten lepszy! Kliknij przycisk poniżej, aby otrzymać 3000 kasy!",
+        color=discord.Color.gold()
+    )
+    view = ActivityView()
+    await ctx.send(embed=embed, view=view)
+
+
 #@bot.command(name='setup_server')
 @commands.has_permissions(administrator=True)
 async def setup_server(ctx):
