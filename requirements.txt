@@ -1,0 +1,11 @@
+discord.py
+pynacl
+requests
+beautifulsoup4
+thefuzz
+yt-dlp
+spotipy
+python-dotenv
+
+feedparser
+aiohttp

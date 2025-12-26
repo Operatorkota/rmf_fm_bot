@@ -1,0 +1,92 @@
+[
+    {
+        "question": "In Splatoon 2's Hero Mode, what role does the player take on?",
+        "correct_answer": "Agent 4",
+        "incorrect_answers": [
+            "Agent 1",
+            "Agent 2",
+            "Agent 3"
+        ]
+    },
+    {
+        "question": "In \"Call of Duty: Black Ops III\" Zombies, what is the reward for completing all of the main easter eggs?",
+        "correct_answer": "1,000,000 XP",
+        "incorrect_answers": [
+            "Juggernog at the start of every game",
+            "50 Liquid Diviniums",
+            "All of the above"
+        ]
+    },
+    {
+        "question": "In the game Pok\u00e9mon Conquest, which warlord is able to bond with Zekrom and a shiny Rayquazza?",
+        "correct_answer": "Nobunaga",
+        "incorrect_answers": [
+            "The Player",
+            "Oichi",
+            "Hideyoshi"
+        ]
+    },
+    {
+        "question": "In \"The Legend of Zelda: Ocarina of Time\", how many rupees can Link carry at maximum?",
+        "correct_answer": "500",
+        "incorrect_answers": [
+            "999",
+            "1000",
+            "5000"
+        ]
+    },
+    {
+        "question": "Which CoD Deathstreak is only available in Call of Duty: Modern Warfare 2?",
+        "correct_answer": "Copycat",
+        "incorrect_answers": [
+            "Martrydom",
+            "Final Stand",
+            "Revenge"
+        ]
+    },
+    {
+        "question": "In \"Fallout 4\", what is the name of the dog you find at the Red Rocket truck stop?",
+        "correct_answer": "Dogmeat",
+        "incorrect_answers": [
+            "Sparky",
+            "Quazar",
+            "Chop"
+        ]
+    },
+    {
+        "question": "What animal is featured in \"Bloons TD Battles?\"",
+        "correct_answer": "Monkeys",
+        "incorrect_answers": [
+            "Alligators",
+            "Pigeons",
+            "Lizards"
+        ]
+    },
+    {
+        "question": "During the development of the game, what was the first Pok\u00e9mon created?",
+        "correct_answer": "Rhyhorn",
+        "incorrect_answers": [
+            "Bulbasaur",
+            "Mew",
+            "Arceus"
+        ]
+    },
+    {
+        "question": "The original mascot of the popular Nintendo game \"Splatoon\" was going to be...",
+        "correct_answer": "Mario",
+        "incorrect_answers": [
+            "Inklings",
+            "Octolings",
+            "Zelda"
+        ]
+    },
+    {
+        "question": "In the world-strategy game 'Sid Meier's Civilization', a programming bug caused the AI representing Gandhi to do what?",
+        "correct_answer": "Become aggressive and start nuclear warfare",
+        "incorrect_answers": [
+            "Start speaking German",
+            "Become friendly and trade all of his assets",
+            "Start nuking his own cities and assets"
+        ]
+    }
+]

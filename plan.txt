@@ -1,0 +1,57 @@
+Plan Działania: Webowy Panel Konfiguracyjny dla Bota Discord
+
+Faza 1: Stworzenie Interfejsu Webowego (Frontend & Backend)
+
+1.  Struktura Katalogów:
+    -   Stworzę nowy folder o nazwie `web_config`, w którym znajdą się wszystkie pliki związane z panelem webowym.
+    -   Wewnątrz `web_config` stworzę podfolder `server_configs` na pliki konfiguracyjne dla poszczególnych serwerów.
+
+2.  Backend (plik `server.js` w folderze `web_config`):
+    -   Użyję Node.js z frameworkiem Express.js do stworzenia prostego serwera API.
+    -   Zainstaluję potrzebne pakiety: `express`, `body-parser` (do odczytu danych z formularzy) i `cors` (do obsługi zapytań z innej domeny).
+    -   Stworzę endpoint API `GET /api/config/:serverId`, który będzie odczytywał i zwracał zawartość pliku konfiguracyjnego danego serwera z folderu `server_configs`.
+    -   Stworzę endpoint API `POST /api/config/:serverId`, który będzie odbierał dane w formacie JSON i zapisywał je do odpowiedniego pliku konfiguracyjnego serwera.
+    -   Stworzę endpoint `GET /api/servers`, który zwróci listę dostępnych konfiguracji serwerów (na potrzeby prototypu będzie to stała lista ID i nazw serwerów).
+    -   Serwer będzie również serwował statyczne pliki frontendu (`index.html`, `style.css`, `script.js`).
+
+3.  Frontend (plik `index.html` w folderze `web_config`):
+    -   Stworzę podstawową strukturę HTML strony.
+    -   Dołączę bibliotekę Bootstrap, aby interfejs był nowoczesny i responsywny.
+    -   Dodam rozwijane menu (dropdown) do wyboru serwera, którego konfigurację chcemy edytować.
+    -   Stworzę formularz z polami do wprowadzania wszystkich opcji konfiguracyjnych. Początkowo formularz będzie nieaktywny.
+
+4.  Frontend (plik `style.css` w folderze `web_config`):
+    -   Dodam podstawowe style, aby poprawić wygląd interfejsu, zgodnie z zasadami Material Design (np. cienie, kolory, odstępy).
+
+5.  Frontend (plik `script.js` w folderze `web_config`):
+    -   Po załadowaniu strony, skrypt pobierze listę serwerów z backendu i wypełni nią rozwijane menu.
+    -   Po wybraniu serwera z listy:
+        -   Skrypt pobierze konfigurację dla wybranego serwera z backendu.
+        -   Wypełni pola formularza otrzymanymi danymi.
+        -   Aktywuje formularz do edycji.
+    -   Dodam obsługę zdarzenia dla przycisku "Zapisz". Po kliknięciu:
+        -   Skrypt odczyta wszystkie wartości z formularza.
+        -   Stworzy obiekt JSON z danymi konfiguracyjnymi.
+        -   Wyśle ten obiekt do backendu za pomocą zapytania `POST` na endpoint `/api/config/:serverId`.
+        -   Wyświetli użytkownikowi komunikat potwierdzający zapisanie zmian.
+
+6.  Pliki Konfiguracyjne:
+    -   W folderze `server_configs` stworzę kilka przykładowych plików konfiguracyjnych (np. `server1.json`, `server2.json`) z domyślnymi wartościami, które posłużą do testowania prototypu.
+
+Faza 2: Integracja z Botem
+
+1.  Wczytywanie Konfiguracji:
+    -   Zmodyfikuję proces uruchamiania bota. Zamiast wczytywać jeden plik `config.json`, bot będzie musiał mieć dostęp do konfiguracji wszystkich serwerów. Dobrym podejściem będzie wczytanie wszystkich plików `*.json` z folderu `server_configs` do słownika przy starcie bota, gdzie kluczami będą ID serwerów.
+
+2.  Obsługa Komend i Zdarzeń:
+    -   Zmodyfikuję wszystkie komendy i zdarzenia, które korzystają z wartości konfiguracyjnych.
+    -   Dla każdej komendy/zdarzenia, uzyskam `guild.id` (ID serwera) z kontekstu (`ctx.guild.id` lub `message.guild.id`).
+    -   Użyję `guild.id` do pobrania poprawnej konfiguracji ze słownika konfiguracji serwerów.
+    -   Użyję wartości z konfiguracji specyficznej dla danego serwera. Będzie to wymagało refaktoryzacji znacznej części kodu bota. Na przykład, zamiast używać globalnej zmiennej `MOD_LOG_CHANNEL_ID`, kod będzie musiał odwoływać się do czegoś w stylu `server_configs[guild_id]["MOD_LOG_CHANNEL_ID"]`.
+
+Faza 3: Udoskonalenia i Dalsze Kroki (do omówienia w przyszłości)
+
+1.  Prawdziwe Logowanie: Zastąpienie rozwijanej listy serwerów prawdziwym systemem logowania przez Discord OAuth2.
+2.  Dynamiczna Lista Serwerów: Backend pobierałby listę serwerów, którymi użytkownik może zarządzać, bezpośrednio z API Discorda.
+3.  Baza Danych: Dla gotowego do wdrożenia rozwiązania, zamienię przechowywanie konfiguracji w plikach JSON na prawdziwą bazę danych (np. SQLite), aby zapewnić lepszą wydajność i skalowalność.
+4.  Przeładowywanie Konfiguracji Bota: Zaimplementuję mechanizm, który pozwoli na dynamiczne przeładowanie konfiguracji w bocie po jej zmianie przez panel webowy, bez konieczności restartu bota.

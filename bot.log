@@ -1,0 +1,36 @@
+AFTER REDIRECTION
+Model Gemini AI został pomyślnie skonfigurowany z kluczem: AIzaS...nwJVA
+Ostrzeżenie: Nie znaleziono kluczy Spotify API. Odtwarzanie z linków Spotify nie będzie działać.
+Zalogowano jako Jestem bocikiem 🤗#5043 (ID: 1400512398552600696)
+Synchronizowanie listy członków serwera...
+Synchronizacja członków zakończona.
+------
+Uruchomiono pętlę rotacji statusu.
+Uruchomiono pętlę zapisu statusu do pliku.
+Uruchomiono pętlę zapisu danych dla panelu.
+Uruchomiono pętlę sprawdzania komend z panelu.
+Uruchomiono pętlę dashboardu na Discordzie.
+Uruchomiono pętlę sprawdzania RSS.
+Uruchomiono pętlę obsługi konsoli.
+
+----------------------------------------------------
+Tryb konsoli aktywny.
+Wiadomości będą wysyłane na kanał: #☕╔ˑˑˑrozmówki (1371244750211911693)
+Wpisz wiadomość i naciśnij Enter.
+----------------------------------------------------
+Zmieniono status na: playing w Zgadywankę (!zgaduj)
+Zmieniono interwał sprawdzania RSS na 15 minut.
+Sprawdzam kanał RSS: https://www.polsatnews.pl/rss/technologie.xml
+Zaktualizowano nazwę kanału statusu na '🟢 Bot Online'.
+DEBUG: Sprawdzam kanał-hub o ID: 1425173164903628840
+DEBUG: Kanał-hub znaleziony. Przystępuję do zmiany uprawnień.
+Przyznaję uprawnienia do łączenia dla roli: '₊ ⊹ Śpioszek'
+RSS: Nie znaleziono nowych artykułów.
+Odblokowano kanał-hub 'Stwórz kanał' (dla @everyone i roli członkowskiej).
+Bot jest w pełni gotowy do pracy.
+Utworzono parę kanałów tymczasowych: Kanał ᴏᴘᴇʀᴀᴛᴏʀ ᴋᴏᴛᴀ i panel-ᴏᴘᴇʀᴀᴛᴏʀ-ᴋᴏᴛᴀ dla operatorkota
+Zamykanie bota i wykonywanie procedur czyszczących...
+DEBUG: Rozpoczęto on_shutdown.
+DEBUG: Próba edycji kanału-hubu...
+OSTRZEŻENIE: Edycja kanału-hubu przekroczyła limit czasu podczas zamykania.
+DEBUG: Zakończono on_shutdown.

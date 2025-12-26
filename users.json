@@ -1,0 +1,662 @@
+[
+    {
+        "id": 1392556613151232000,
+        "name": "dev.0ur",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1106300087954571304,
+        "name": "skoniekk",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1437034416546250763,
+        "name": "PCF BOT",
+        "discriminator": "7321",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PCF BOT",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 940161134428827678,
+        "name": "bober1.__",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1383725401322426439,
+        "name": "zmi0k_35527",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1080609032051630080,
+        "name": "wikmon",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Special Response Unit(SRU)"
+        ]
+    },
+    {
+        "id": 499595256270946326,
+        "name": "InviteLogger",
+        "discriminator": "5780",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "InviteLogger",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 1423975814277496895,
+        "name": "kt44zz_",
+        "discriminator": "0",
+        "nick": "HOKUS",
+        "roles": [
+            "@everyone",
+            "Struj Do Przebrania się",
+            "Ukraińska Mafia",
+            "PACJENT",
+            "☢GAZOWNIK☢",
+            "Psychiatra",
+            "Medyk",
+            "GANG PRUSZKOWSKI",
+            "Prawnik",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Starszy Kapral"
+        ]
+    },
+    {
+        "id": 1426571961500176487,
+        "name": "shadowrift02",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1311826001080090685,
+        "name": "snajperrrv",
+        "discriminator": "0",
+        "nick": "[Adwokat] Snajperrrv",
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Prawnik",
+            "Testowy  Moderator"
+        ]
+    },
+    {
+        "id": 1376207354789367868,
+        "name": "Bot Orderly",
+        "discriminator": "0875",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "BOT  POMOC"
+        ]
+    },
+    {
+        "id": 302050872383242240,
+        "name": "DISBOARD",
+        "discriminator": "2760",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "DISBOARD.org",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 1023662216454619237,
+        "name": "tomek4130",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Partnerstwo"
+        ]
+    },
+    {
+        "id": 955164862378557440,
+        "name": "swinka_pepa958",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 911738266301112371,
+        "name": "kieras1948",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1432359571581698061,
+        "name": "operator_sroksiula",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 713427608335024213,
+        "name": "kroliczek.ze.zwiazkuradzieckiego",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Psychiatra"
+        ]
+    },
+    {
+        "id": 411916947773587456,
+        "name": "Jockie Music",
+        "discriminator": "8158",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Jockie Music",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 1447309348295409868,
+        "name": "Streamy",
+        "discriminator": "2787",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Disscord",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 1398675605129527377,
+        "name": "kuba6423",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Safety And Security Coordinator (SSC)"
+        ]
+    },
+    {
+        "id": 1002209076933034005,
+        "name": "digslam",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Szeregowy Orderly"
+        ]
+    },
+    {
+        "id": 1434189354997252208,
+        "name": "mochi_nikottp_42102",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1146441691562250340,
+        "name": "plapla_50179",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Server Booster",
+            "PACJENT",
+            "Combat medic",
+            "Prokurator",
+            "Prawnik",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Zastępca Szefa Orderly",
+            "Dyrektor Placówki",
+            "ㅤㅤㅤAdministracja",
+            "Administrator",
+            "CO Owner",
+            "Booster"
+        ]
+    },
+    {
+        "id": 767109390129692753,
+        "name": "puro5244",
+        "discriminator": "0",
+        "nick": "[Szef Orderly ] Gabriel",
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Prawnik",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Szef Orderly"
+        ]
+    },
+    {
+        "id": 820328684845268992,
+        "name": "stefan_2138",
+        "discriminator": "0",
+        "nick": "Stefan",
+        "roles": [
+            "@everyone",
+            "Server Booster",
+            "Profesjonalny niszczyciel bota",
+            "Inspektor SANEPID",
+            "Ukraińska Mafia",
+            "PACJENT",
+            "Szef Medyków",
+            "Medyk",
+            "Kontraktor",
+            "GANG PRUSZKOWSKI",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Starszy Kapral",
+            "Administrator",
+            "Starszy Administator",
+            "Booster"
+        ]
+    },
+    {
+        "id": 980512810775748639,
+        "name": "alan_dev",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "❆vyral ✯",
+            "Prawnik"
+        ]
+    },
+    {
+        "id": 1440289183309631518,
+        "name": "friedrich.von.fazber",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1282434642292641891,
+        "name": "zolty_smok2",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Smok",
+            "GANG PRUSZKOWSKI"
+        ]
+    },
+    {
+        "id": 1051167022408536094,
+        "name": "ihonzy450",
+        "discriminator": "0",
+        "nick": "I0honzy",
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "ROLE",
+            "PADDED",
+            "Odizolowanie",
+            "MS",
+            "Izolatki/Holding cells",
+            "ㅤㅤㅤPERMISJE DO:",
+            "Psychiatra",
+            "Naczelny Psychiatra"
+        ]
+    },
+    {
+        "id": 877210657953566751,
+        "name": "operatorkota",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Zajebane_radio",
+            "PACJENT",
+            "GANG PRUSZKOWSKI",
+            "Prokurator",
+            "Prawnik",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Kapral Orderly",
+            "Strefa Orderly↓",
+            "ㅤㅤㅤAdministracja",
+            "Młodszy Moderator",
+            "Moderator",
+            "Starszy Moderator",
+            "Młodszy Administrator",
+            "Administrator",
+            "Starszy Administator",
+            "Fundusz Placówki™",
+            "Owner"
+        ]
+    },
+    {
+        "id": 1051558424573394964,
+        "name": "6szymens",
+        "discriminator": "0",
+        "nick": "Operator Kota",
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Psychiatra",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Rekrut Orderly"
+        ]
+    },
+    {
+        "id": 294882584201003009,
+        "name": "GiveawayBot",
+        "discriminator": "2381",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "GiveawayBot",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 1367111211816194118,
+        "name": "narutonarutokas",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 922736512506925107,
+        "name": "6szymen",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "Pozwolenie na broń"
+        ]
+    },
+    {
+        "id": 1166379622267633745,
+        "name": "spongebop.l",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1146777693438869525,
+        "name": "hodowcaptasznikow",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 810540985032900648,
+        "name": "Musico",
+        "discriminator": "2915",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Musico",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 572906387382861835,
+        "name": "StartIT",
+        "discriminator": "2275",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "StartIT",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 853327905357561948,
+        "name": "Appy",
+        "discriminator": "0756",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Strefa Orderly↓",
+            "Appy"
+        ]
+    },
+    {
+        "id": 1444431077954293884,
+        "name": "arsenic_74.922",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1324764506773131264,
+        "name": "kappa2.com",
+        "discriminator": "0",
+        "nick": "OPERATOR KOTA",
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1175540082824982620,
+        "name": "girekuwu_16714",
+        "discriminator": "0",
+        "nick": "60km/h",
+        "roles": [
+            "@everyone",
+            "Kara Czerwona 1",
+            "PACJENT",
+            "Pozwolenie na broń",
+            "Orderly",
+            "Rekrut Orderly"
+        ]
+    },
+    {
+        "id": 1159834210366922782,
+        "name": "jerzy_l",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1431741003647418498,
+        "name": "kacpersa136atr001",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1270093920256393248,
+        "name": "Dzik",
+        "discriminator": "3369",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "Dzik",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 757280923757707355,
+        "name": "hektor_jg",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 945464764346290226,
+        "name": "lamerkq",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1364157928399048704,
+        "name": "z1miok",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT",
+            "iSO"
+        ]
+    },
+    {
+        "id": 915363105133965342,
+        "name": "toshiyo1",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1400512398552600696,
+        "name": "RMF FM",
+        "discriminator": "5043",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "RMF FM",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 1360858827238670336,
+        "name": "bocik wkurwicik",
+        "discriminator": "3250",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "idk who is this",
+            "BOTY"
+        ]
+    },
+    {
+        "id": 1402887391080873994,
+        "name": "lipt0nek_2025",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 366965228447203328,
+        "name": "doniczka27",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1082251640393969695,
+        "name": "_xminion_",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1068568923517235245,
+        "name": "cejocike",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    },
+    {
+        "id": 1403730737957437534,
+        "name": "operatorkota1",
+        "discriminator": "0",
+        "nick": null,
+        "roles": [
+            "@everyone",
+            "PACJENT"
+        ]
+    }
+]

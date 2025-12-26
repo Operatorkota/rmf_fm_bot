@@ -1,0 +1,85 @@
+{
+    "1423731392587759889": {
+        "punishments": [
+            {
+                "strefa": "zielona",
+                "reason": "(brak danych - migracja)",
+                "moderator": "(brak danych - migracja)",
+                "date": "(brak danych - migracja)",
+                "mute_duration": null
+            }
+        ],
+        "current_role_id": null
+    },
+    "1364157928399048704": {
+        "punishments": [
+            {
+                "strefa": "zielona",
+                "reason": "(brak danych - migracja)",
+                "moderator": "(brak danych - migracja)",
+                "date": "(brak danych - migracja)",
+                "mute_duration": null
+            },
+            {
+                "strefa": "zielona",
+                "reason": "(brak danych - migracja)",
+                "moderator": "(brak danych - migracja)",
+                "date": "(brak danych - migracja)",
+                "mute_duration": null
+            }
+        ],
+        "current_role_id": 1423945062617972746
+    },
+    "1403730737957437534": {
+        "punishments": [],
+        "current_role_id": null
+    },
+    "980198096346681384": {
+        "punishments": [
+            {
+                "strefa": "\u0139\u013d\u0102\u0142\u0139\u201ata",
+                "reason": "(brak danych - migracja)",
+                "moderator": "(brak danych - migracja)",
+                "date": "(brak danych - migracja)",
+                "mute_duration": null
+            }
+        ],
+        "current_role_id": 1423945238631813210
+    },
+    "1373267322126602300": {
+        "punishments": [
+            {
+                "strefa": "zielona",
+                "reason": "(brak danych - migracja)",
+                "moderator": "(brak danych - migracja)",
+                "date": "(brak danych - migracja)",
+                "mute_duration": null
+            }
+        ],
+        "current_role_id": 1423944915527930057
+    },
+    "1423975814277496895": {
+        "punishments": [
+            {
+                "strefa": "zielona",
+                "reason": "chuj",
+                "moderator": "operatorkota",
+                "date": "2025-10-18T14:50:09.809219",
+                "mute_duration": "10s"
+            }
+        ],
+        "current_role_id": null
+    },
+    "877210657953566751": {
+        "punishments": [
+            {
+                "strefa": "zielona",
+                "reason": "test",
+                "moderator": "operatorkota",
+                "date": "2025-12-26T09:52:27.114101",
+                "mute_duration": "5m"
+            }
+        ],
+        "current_role_id": 1437130372524806255
+    }
+}

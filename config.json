@@ -1,0 +1,88 @@
+{
+    "BOT_TOKEN": "",
+    "SPOTIPY_CLIENT_ID": "",
+    "SPOTIPY_CLIENT_SECRET": "",
+    "GEMINI_API_KEYS": [
+      "AIzaSyAnlwaUMX9CZc0c8Qti4U4cwFBRaknwJVA",
+      "AIzaSyDXg3mP-4pfxRv8HjqVqZkTIHM7xuuS1i8",
+      "AIzaSyAnlwaUMX9CZc0c8Qti4U4cwFBRaknwJVA",
+      "AIzaSyALRgzEWWxwQ9Xxolwh78UJjcEXPXdI8mM",
+      "AIzaSyCfZRc7v7BGEATGRGzXNeIZkuB14cKqydQ"
+    ],
+    "OWNER_ID": 877210657953566751,
+    "HUB_CHANNEL_ID": 1453906304925044738,
+    "TEMP_CHANNEL_CATEGORY_ID": 1437132778096431284,
+    "MOD_LOG_CHANNEL_ID": 1437132784237019137,
+    "LOCK_ROZ_CHANNEL_ID": 1437132767220600992,
+    "MEMBER_ROLE_ID": 1437132767220600992,
+    "STATUS_CHANNEL_ID": null,
+    "LOG_CHANNEL_ID": null,
+    "SEND_CHANNEL_ID": 1437055978100232322,
+    "DASHBOARD_CHANNEL_ID": 1437056066855899287,
+    "PUNISHMENT_ROLES": {
+        "YOUR_ZERO_ROLE_ID": 1437130373254348851,
+        "YOUR_GREEN_ROLE_ID_1": 1437130372524806255,
+        "YOUR_GREEN_ROLE_ID_2": 1437130371547398185,
+        "YOUR_GREEN_ROLE_ID_3": 1437130370553217024,
+        "YOUR_YELLOW_ROLE_ID_1": 1437130369525616802,
+        "YOUR_YELLOW_ROLE_ID_2": 1437130368607326208,
+        "YOUR_YELLOW_ROLE_ID_3": 1437130367567007754,
+        "YOUR_RED_ROLE_ID_1": 1437130366140940490,
+        "YOUR_RED_ROLE_ID_2": 1437130364995899536
+    },
+    "AUTOROLE": {
+        "USER_ROLE_ID": 1437132768407453848,
+        "BOT_ROLE_ID": 1429564469205274654
+    },
+    "WEB_PANEL_URL": "https://botydiscord.unaux.com/?i=1",
+    "RSS_FEED": {
+        "URL": "https://www.polsatnews.pl/rss/technologie.xml",
+        "CHANNEL_ID": null,
+        "INTERVAL_MINUTES": 15
+    },
+    "AI_MODERATOR": {
+        "ENABLED": true,
+        "THRESHOLD": 7,
+        "IGNORE_CHANNELS": []
+    },
+    "LIVE_MODERATION": {
+      "ENABLED": true,
+      "IGNORE_ROLES": [1375555835463471226],
+      "FORBIDDEN_WORDS": {
+        "ENABLED": true,
+        "WORDS": ["niger", "nigger", "nigeria"],
+        "PUNISHMENT": {
+          "ACTION": "KARA",
+          "STREFA": "żółta",
+          "ODWOLANIE": "NIE",
+          "MUTE_DURATION": "5m"
+        }
+      },
+      "ANTI_SPAM": {
+        "ENABLED": true,
+        "MESSAGE_COUNT": 5,
+        "TIME_SECONDS": 4,
+        "PUNISHMENT": {
+          "ACTION": "MUTE",
+          "DURATION": "10m",
+          "REASON": "Automatycznie: Wykryto spam"
+        }
+      },
+      "ANTI_CAPS": {
+        "ENABLED": true,
+        "MIN_LENGTH": 20,
+        "CAPS_PERCENTAGE": 75,
+        "PUNISHMENT": {
+          "ACTION": "WARN_AND_DELETE",
+          "REASON": "Automatycznie: Użyto zbyt wielu wielkich liter"
+        }
+      },
+      "ANTI_INVITE": {
+        "ENABLED": true,
+        "PUNISHMENT": {
+          "ACTION": "DELETE_AND_WARN",
+          "REASON": "Automatycznie: Publikowanie zaproszeń jest niedozwolone"
+        }
+      }
+    }
+}
