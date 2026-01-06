@@ -21,24 +21,13 @@ import feedparser
 import time
 import sys
 import functools
+from typing import Literal, Optional
 
-# Zostawiamy komunikaty, ale sama redirekcja jest wyłączona
 print("Logi będą wyświetlane w terminalu.")
-# sys.stdout = open('bot.log', 'w', encoding='utf-8')
-# sys.stderr = sys.stdout
-
-# --- Konfiguracja Ścieżek ---
-# Użyj zmiennej środowiskowej DATA_PATH, jeśli jest ustawiona.
-# W przeciwnym razie użyj katalogu, w którym znajduje się skrypt bot.py.
-# To zapewnia, że bot zawsze znajdzie swoje pliki, niezależnie od miejsca uruchomienia.
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.getenv('DATA_PATH', SCRIPT_DIR)
 print(f"Używam katalogu danych: {os.path.abspath(DATA_DIR)}")
-
-
 # --- Konfiguracja ---
-
-
 try:
     with open(os.path.join(DATA_DIR, 'config.json'), 'r', encoding='utf-8') as f:
         config = json.load(f)
@@ -409,8 +398,15 @@ async def summarize(ctx, limit: int = 100):
             await ctx.send(f"Wystąpił błąd podczas generowania podsumowania: {e}")
             print(f"Błąd w komendzie summarize: {e}")
 
-@bot.command(aliases=['p'])
+@bot.hybrid_command(name="play", description="Odtwarza muzykę z YouTube lub Spotify.")
 async def play(ctx, *, search: str):
+    """
+    Odtwarza muzykę.
+    Parameters
+    ----------
+    search: Nazwa piosenki lub link (YouTube/Spotify)
+    """
+    await ctx.defer() # Daje czas na przetworzenie (ważne dla slash commands)
     global music_player
     vc = await get_voice_client(ctx)
     if not vc:
@@ -458,14 +454,16 @@ async def play(ctx, *, search: str):
         await music_player.queue.put(search)
         await ctx.send(f"Dodano do kolejki: **{search}**")
 
-@bot.command(aliases=['s'])
+@bot.hybrid_command(name="skip", description="Pomija aktualny utwór.")
 async def skip(ctx):
+    """Pomija aktualnie odtwarzany utwór."""
     if music_player and music_player.voice_client and music_player.voice_client.is_playing():
         music_player.voice_client.stop()
         await ctx.send("Pominięto piosenkę.")
 
-@bot.command(aliases=['q'])
+@bot.hybrid_command(name="queue", description="Pokazuje kolejkę utworów.")
 async def queue(ctx):
+    """Wyświetla listę piosenek w kolejce."""
     if music_player and not music_player.queue.empty():
         queue_list = list(music_player.queue._queue)
         embed = discord.Embed(title="Kolejka piosenek", color=discord.Color.blue())
@@ -475,8 +473,9 @@ async def queue(ctx):
     else:
         await ctx.send("Kolejka jest pusta.")
 
-@bot.command()
+@bot.hybrid_command(name="stop", description="Zatrzymuje muzykę i czyści kolejkę.")
 async def stop(ctx):
+    """Zatrzymuje odtwarzanie i odłącza bota."""
     global music_player
     if music_player and music_player.voice_client:
         music_player.queue = asyncio.Queue()
@@ -494,9 +493,15 @@ async def shutdown(ctx):
     await ctx.send("Wyłączam bota...")
     await bot.close()
 
-@bot.command()
+@bot.hybrid_command(name="clear", description="Usuwa określoną liczbę wiadomości.")
 @commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount: int):
+    """
+    Czyści czat.
+    Parameters
+    ----------
+    amount: Liczba wiadomości do usunięcia
+    """
     """Clears a specified number of messages from the channel."""
     if amount <= 0:
         await ctx.send("Liczba wiadomości do usunięcia musi być dodatnia.", delete_after=5)
@@ -883,10 +888,19 @@ async def lock_unlock_error(ctx, error):
         print(f"Wystąpił błąd w komendzie lock/unlock: {error}")
         await ctx.send("Wystąpił nieoczekiwany błąd.")
 
-@bot.command(name="kara")
+@bot.hybrid_command(name="kara", description="Nadaje karę użytkownikowi (system stref).")
 @commands.has_permissions(manage_messages=True)
-async def kara(ctx, strefa: str, member: discord.Member, odwolanie: str, mute_duration: str = None, *, reason: str):
-    """Tworzy kartę kary dla użytkownika."""
+async def kara(ctx, strefa: Literal["zero", "zielona", "żółta", "czerwona", "czarna"], member: discord.Member, odwolanie: Literal["TAK", "NIE"], mute_duration: Optional[str] = None, *, reason: str):
+    """
+    Tworzy kartę kary.
+    Parameters
+    ----------
+    strefa: Strefa kary (zero, zielona, żółta, czerwona, czarna)
+    member: Użytkownik, który otrzymuje karę
+    odwolanie: Czy możliwe jest odwołanie? (TAK/NIE)
+    mute_duration: (Opcjonalne) Czas wyciszenia, np. 10m, 1h
+    reason: Powód kary
+    """
     punishment_roles = config.get("PUNISHMENT_ROLES", {})
     mod_log_channel_id = config.get("MOD_LOG_CHANNEL_ID")
 
@@ -1966,23 +1980,6 @@ async def update_dashboard_data():
     except Exception as e:
         print(f"Błąd podczas zapisu pliku servers.json: {e}")
 
-    # --- Status Użytkowników ---
-    users_data = []
-    for guild in bot.guilds:
-        for member in guild.members:
-            users_data.append({
-                "id": member.id,
-                "name": member.name,
-                "discriminator": member.discriminator,
-                "nick": member.nick,
-                "roles": [role.name for role in member.roles]
-            })
-    try:
-        with open(os.path.join(DATA_DIR, "users.json"), "w", encoding="utf-8") as f:
-            json.dump(users_data, f, ensure_ascii=False, indent=4)
-    except Exception as e:
-        print(f"Błąd podczas zapisu pliku users.json: {e}")
-
 @tasks.loop(seconds=5)
 async def check_panel_commands():
     """Sprawdza, czy panel webowy wysłał jakąś komendę."""
@@ -2239,10 +2236,14 @@ async def before_check_rss_feed():
 async def on_ready():
     """Wywoływane, gdy bot jest gotowy do pracy."""
     print(f'Zalogowano jako {bot.user} (ID: {bot.user.id})')
-    print("Synchronizowanie listy członków serwera...")
-    for guild in bot.guilds:
-        await guild.chunk()
-    print("Synchronizacja członków zakończona.")
+    
+    # Synchronizacja komend slash (hybrid)
+    try:
+        synced = await bot.tree.sync()
+        print(f"Zsynchronizowano {len(synced)} komend slash.")
+    except Exception as e:
+        print(f"Błąd synchronizacji komend slash: {e}")
+
     print('------')
     
     # Uruchomienie pętli w tle
@@ -2302,12 +2303,12 @@ async def on_ready():
         loaded_configs = await bot.loop.run_in_executor(None, read_servers_config)
         server_configs.update(loaded_configs)
     except (FileNotFoundError, json.JSONDecodeError):
-        pass # Keep the existing (potentially empty) config
+        pass 
 
     for guild in bot.guilds:
         guild_id = str(guild.id)
         
-        # Używamy globalnego configu jako fallback, jeśli serwera nie ma w pliku servers.json
+        
         server_config = server_configs.get(guild_id, config)
 
         hub_channel_id = server_config.get("HUB_CHANNEL_ID")
@@ -2325,18 +2326,18 @@ async def on_ready():
                 
                 member_role = guild.get_role(member_role_id) if member_role_id else None
                 
-                # Rola @everyone
+                
                 everyone_role = guild.default_role
 
-                # Pobierz aktualne nadpisania uprawnień, aby ich nie kasować
+                
                 overwrites = hub_channel.overwrites
 
-                # Ustaw uprawnienie 'Połącz' na TAK dla @everyone
+              
                 everyone_overwrite = overwrites.get(everyone_role, discord.PermissionOverwrite())
                 everyone_overwrite.connect = True
                 overwrites[everyone_role] = everyone_overwrite
 
-                # Ustaw uprawnienie 'Połącz' na TAK dla roli podanej przez użytkownika
+               
                 if member_role:
                     member_overwrite = overwrites.get(member_role, discord.PermissionOverwrite())
                     member_overwrite.connect = True
@@ -2400,7 +2401,7 @@ async def on_shutdown():
 
 @bot.event
 async def on_message(message):
-    # Ignoruj wiadomości od samego bota oraz wiadomości prywatne
+  
     if message.author.bot or not message.guild:
         return
 
@@ -2413,26 +2414,26 @@ async def on_message(message):
 
     # --- Anti-Spam Logic ---
     if ANTI_SPAM_CONFIG.get("ENABLED", False) and message.author.id != bot.owner_id:
-        # Ignore users with manage_messages permission
+        
         if not message.channel.permissions_for(message.author).manage_messages:
             current_time = time.time()
             user_id = message.author.id
             
-            # Get user's message timestamps, or create a new list
+            
             timestamps = user_message_timestamps.get(user_id, [])
             
-            # Filter out old timestamps
+            
             time_window = ANTI_SPAM_CONFIG.get("TIME_SECONDS", 5)
             timestamps = [t for t in timestamps if current_time - t < time_window]
             
-            # Add the new timestamp
+            
             timestamps.append(current_time)
             user_message_timestamps[user_id] = timestamps
             
-            # Check if the user has exceeded the message count
+            
             message_limit = ANTI_SPAM_CONFIG.get("MESSAGE_COUNT", 5)
             if len(timestamps) >= message_limit:
-                # Mute the user
+                
                 punishment_config = ANTI_SPAM_CONFIG.get("PUNISHMENT", {})
                 duration_str = punishment_config.get("DURATION", "5m")
                 reason = punishment_config.get("REASON", "Automatycznie: Wykryto spam.")
@@ -2447,10 +2448,10 @@ async def on_message(message):
                     elif unit == 'h': duration_seconds = value * 3600
                     elif unit == 'd': duration_seconds = value * 86400
                 except (ValueError, TypeError):
-                    duration_seconds = 300 # Default to 5 minutes on error
+                    duration_seconds = 300 
                 
                 try:
-                    # Delete the spamming messages first
+                   
                     try:
                         await message.channel.purge(limit=message_limit, check=lambda m: m.author.id == user_id)
                     except discord.Forbidden:
@@ -2534,7 +2535,7 @@ async def on_message(message):
             try:
                 await message.delete()
             except discord.NotFound:
-                pass # Wiadomość mogła zostać już usunięta
+                pass 
             except discord.Forbidden:
                 if log_channel:
                     await log_channel.send(":warning: Bot nie ma uprawnień do usuwania wiadomości na tym kanale.")
@@ -2543,7 +2544,7 @@ async def on_message(message):
             kara_command = bot.get_command('kara')
             if kara_command:
                 try:
-                    # Tworzymy sztuczny kontekst, aby wywołać komendę
+                   
                     ctx = await bot.get_context(message)
                     await kara_command(ctx, strefa="żółta", member=message.author, odwolanie="NIE", mute_duration=None, reason="Automatycznie: Wykryto zakazane słowo")
                     if log_channel:
@@ -2553,9 +2554,9 @@ async def on_message(message):
                     if log_channel:
                         await log_channel.send(f":warning: Wystąpił błąd podczas automatycznego nadawania kary dla {message.author.mention}: `{e}`")
             
-            return # Zatrzymaj dalsze przetwarzanie wiadomości (np. komend)
+            return
 
-    # Sprawdź, czy wiadomość to wzmianka bota i czy ma on odpowiadać
+    
     if gemini_model and bot.user.mentioned_in(message) and not message.reference:
         async with message.channel.typing():
             prompt = message.content.replace(f'<@!{bot.user.id}>', '').replace(f'<@{bot.user.id}>', '').strip()
@@ -2563,10 +2564,10 @@ async def on_message(message):
             if not prompt:
                 return
 
-            # Sprawdź, czy autorem wiadomości jest właściciel bota
+            
             is_owner = message.author.id == bot.owner_id
 
-            # Przygotuj instrukcję systemową dla AI
+          
             system_instruction = (
                 "Jesteś pomocnym asystentem AI. Odpowiadaj na pytania użytkowników. "
                 "Jeśli użytkownik prosi o wykonanie komendy bota, odpowiedz w formacie: "
@@ -2652,8 +2653,6 @@ async def on_message(message):
                                         # 'play' przyjmuje argument 'search'
                                         await command(fake_ctx, search=command_args)
                                     else:
-                                        # Domyślna obsługa dla innych komend, jeśli istnieją
-                                        # To może wymagać dalszego dostosowania w zależności od sygnatur innych komend
                                         await command(fake_ctx, command_args)
 
                                 except Exception as cmd_e:
@@ -2664,8 +2663,8 @@ async def on_message(message):
                         else:
                             await message.reply(f"AI zasugerowało niedozwoloną komendę: `{command_name}`.")
                     else:
-                        print(f"Odpowiedź Gemini nie zawiera komendy. Wysyłam tekst: '{response.text}'") # New debug print
-                        # Jeśli odpowiedź nie jest komendą, po prostu ją wyślij
+                        print(f"Odpowiedź Gemini nie zawiera komendy. Wysyłam tekst: '{response.text}'") 
+                       
                         await message.reply(response.text)
             except Exception as e:
                 print(f"Błąd podczas komunikacji z Gemini API: {e}")
@@ -2796,7 +2795,7 @@ async def on_voice_state_update(member, before, after):
                 del temp_channels[before.channel.id]
 
             except discord.NotFound:
-                # Któryś z kanałów mógł już zostać usunięty
+                
                 if before.channel.id in temp_channels:
                     del temp_channels[before.channel.id]
             except discord.Forbidden:
@@ -2812,7 +2811,7 @@ async def console_input_loop():
 
     # --- Odczyt ID kanału z config.json ---
     console_channel_id = None
-    channel_key_name = "SEND_CHANNEL_ID" # Użyj klucza, który istnieje w pliku
+    channel_key_name = "SEND_CHANNEL_ID" 
     try:
         with open(os.path.join(DATA_DIR, 'config.json'), 'r', encoding='utf-8') as f:
             config = json.load(f)
@@ -2858,8 +2857,6 @@ async def console_input_loop():
                 continue
 
             channel_for_message = target_channel
-            
-            # If a default channel isn't set, parse the input for ID and message
             if not channel_for_message:
                 parts = message_to_send.split(' ', 1)
                 if len(parts) == 2:
@@ -2909,11 +2906,9 @@ async def create_embed(ctx):
         msg = await bot.wait_for('message', check=check, timeout=30.0)
         
         target_channel = None
-        # Spróbuj znaleźć kanał przez wzmiankę
         if msg.channel_mentions:
             target_channel = msg.channel_mentions[0]
         else:
-            # Spróbuj znaleźć kanał przez ID
             try:
                 channel_id = int(msg.content)
                 target_channel = bot.get_channel(channel_id)

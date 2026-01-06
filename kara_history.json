@@ -78,9 +78,16 @@
                 "moderator": "operatorkota",
                 "date": "2025-12-26T09:52:27.114101",
                 "mute_duration": "5m"
+            },
+            {
+                "strefa": "zielona",
+                "reason": "test",
+                "moderator": "operatorkota",
+                "date": "2026-01-06T10:40:48.822956",
+                "mute_duration": null
             }
         ],
-        "current_role_id": 1437130372524806255
+        "current_role_id": 1423945062617972746
     },
     "1175540082824982620": {
         "punishments": [
